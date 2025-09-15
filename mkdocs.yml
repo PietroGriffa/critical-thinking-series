@@ -1,0 +1,67 @@
+site_name: Critical Thinking Series
+site_description: Educational series on developing critical thinking skills
+site_author: Pietro Griffa
+site_url: https://pietrogriffa.github.io/critical-thinking-series/
+
+repo_name: PietroGriffa/critical-thinking-series
+repo_url: https://github.com/PietroGriffa/critical-thinking-series
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Topics:
+    - topics/index.md
+    - Elaboration Likelihood Model: topics/01-elaboration-likelihood-model.md
+  - About: about.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/PietroGriffa/critical-thinking-series
+
+copyright: Copyright &copy; 2025 Pietro Griffa

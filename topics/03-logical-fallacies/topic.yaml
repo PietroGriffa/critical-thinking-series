@@ -1,0 +1,21 @@
+title: "Logical Fallacies in Arguments"
+slug: "logical-fallacies"
+number: 3
+date: "2025-01-29"
+duration: 60
+presenter: "Pietro Griffa"
+description: "Learning to identify and avoid common logical fallacies in reasoning and argumentation."
+objectives:
+  - "Recognize common logical fallacies in arguments"
+  - "Understand why fallacies undermine reasoning"
+  - "Practice constructing sound arguments"
+tags:
+  - "logic"
+  - "argumentation"
+  - "fallacies"
+status: "planned"
+materials:
+  slides: "slides.pdf"
+  handout: "handout.pdf"
+  demo: "demo/"
+  references: "references.md"

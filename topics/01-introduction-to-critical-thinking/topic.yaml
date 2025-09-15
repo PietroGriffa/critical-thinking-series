@@ -1,0 +1,21 @@
+title: "Introduction to Critical Thinking"
+slug: "introduction-to-critical-thinking"
+number: 1
+date: "2025-01-15"
+duration: 60
+presenter: "Pietro Griffa"
+description: "An introduction to critical thinking fundamentals and why it matters in everyday decision making."
+objectives:
+  - "Understand what critical thinking is and its importance"
+  - "Learn the basic components of critical reasoning"
+  - "Practice identifying assumptions in everyday scenarios"
+tags:
+  - "fundamentals"
+  - "introduction"
+  - "reasoning"
+status: "planned"
+materials:
+  slides: "slides.pdf"
+  handout: "handout.pdf"
+  demo: "demo/"
+  references: "references.md"

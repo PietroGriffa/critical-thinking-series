@@ -1,0 +1,21 @@
+title: "Cognitive Biases and Mental Shortcuts"
+slug: "cognitive-biases"
+number: 2
+date: "2025-01-22"
+duration: 75
+presenter: "Pietro Griffa"
+description: "Exploring common cognitive biases that affect our judgment and decision-making processes."
+objectives:
+  - "Identify common cognitive biases in everyday thinking"
+  - "Understand the evolutionary origins of mental shortcuts"
+  - "Develop strategies to recognize and mitigate bias"
+tags:
+  - "psychology"
+  - "biases"
+  - "decision-making"
+status: "planned"
+materials:
+  slides: "slides.pdf"
+  handout: "handout.pdf"
+  demo: "demo/"
+  references: "references.md"

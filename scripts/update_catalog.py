@@ -3,7 +3,6 @@
 Script to auto-generate the topics catalog in README.md
 """
 
-import os
 import re
 import yaml
 from pathlib import Path
@@ -23,7 +22,8 @@ def generate_catalog_table():
     
     # Find all topic directories
     for topic_dir in sorted(topics_dir.iterdir()):
-        if topic_dir.is_dir() and topic_dir.name.startswith(('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')):
+        digits = ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
+        if topic_dir.is_dir() and topic_dir.name.startswith(digits):
             metadata = load_topic_metadata(topic_dir)
             if metadata:
                 topics.append({
@@ -67,8 +67,15 @@ def update_readme():
     new_catalog = generate_catalog_table()
     
     # Replace the catalog section
-    pattern = r'<!-- BEGIN AUTO-GENERATED CATALOG -->.*?<!-- END AUTO-GENERATED CATALOG -->'
-    replacement = f"<!-- BEGIN AUTO-GENERATED CATALOG -->\n{new_catalog}\n<!-- END AUTO-GENERATED CATALOG -->"
+    pattern = (
+        r'<!-- BEGIN AUTO-GENERATED CATALOG -->.*?'
+        r'<!-- END AUTO-GENERATED CATALOG -->'
+    )
+    replacement = (
+        f"<!-- BEGIN AUTO-GENERATED CATALOG -->\n"
+        f"{new_catalog}\n"
+        f"<!-- END AUTO-GENERATED CATALOG -->"
+    )
     
     new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
     

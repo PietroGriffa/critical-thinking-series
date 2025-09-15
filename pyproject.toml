@@ -1,0 +1,96 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "critical-thinking-series"
+version = "0.1.0"
+description = "A series of critical thinking topics for educational purposes"
+authors = [{name = "Pietro Griffa"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.11"
+
+# Main project dependencies for documentation and scripts
+dependencies = [
+    "mkdocs>=1.5.0",
+    "mkdocs-material>=9.0.0", 
+    "mkdocs-git-revision-date-localized-plugin>=1.2.0",
+    "pyyaml>=6.0"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["scripts"]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.0"
+]
+
+[tool.uv.workspace]
+members = [
+    "topics/*"
+]
+
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+# Same as Black.
+line-length = 88
+indent-width = 4
+
+# Assume Python 3.11
+target-version = "py311"
+
+[tool.ruff.lint]
+# Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
+select = ["E", "F"]
+ignore = []
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.13.0",
+]
